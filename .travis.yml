@@ -1,0 +1,37 @@
+language: java
+sudo: false
+dist: trusty
+
+env:
+  global:
+    - JOBS=1
+  matrix:
+    - RUN_INTEGRATION_TESTS=true
+      KAFKA_VERSION=0.9
+    - RUN_INTEGRATION_TESTS=false
+      KAFKA_VERSION=0.9
+    - RUN_INTEGRATION_TESTS=true
+      KAFKA_VERSION=2.0
+    - RUN_INTEGRATION_TESTS=false
+      KAFKA_VERSION=2.0
+
+jdk:
+  - oraclejdk8
+
+cache:
+  directories:
+    - $HOME/.m2
+  yarn: true
+
+addons:
+  firefox: latest
+
+install:
+  - ./.travis_install.sh
+
+script:
+  - ./.travis_test.sh
+
+branches:
+  only:
+    - master

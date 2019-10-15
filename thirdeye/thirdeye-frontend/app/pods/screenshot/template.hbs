@@ -1,0 +1,13 @@
+{{#if anomaly}}
+  <div class="card-container card-container--padding">
+    {{timeseries-chart
+      series=series
+      colorMapping=colorMapping
+      axis=axis
+      zoom=zoom
+      subchart=subchart
+      legend=legend
+      point=point
+    }}
+  </div>
+{{/if}}
