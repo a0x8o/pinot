@@ -42,7 +42,7 @@
     <jetty.version>9.4.12.v20180830</jetty.version>
     <jackson.version>2.9.9</jackson.version>
     <mysql.connector.version>5.1.39</mysql.connector.version>
-    <quartz.version>2.2.1</quartz.version>
+    <quartz.version>2.3.2</quartz.version>
     <httpclient.version>4.5.2</httpclient.version>
     <commons.email.version>1.4</commons.email.version>
     <commons-math3.version>3.2</commons-math3.version>
